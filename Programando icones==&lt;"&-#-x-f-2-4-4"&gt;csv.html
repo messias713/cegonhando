@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<center>
+<style>
+#div1 {
+  font-size:48px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div id="div1" class="fa"></div>
+
+<script>
+function chargebattery() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf244;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf245;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf246;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf247;";
+    }, 3000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf248;";
+    }, 4000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf249;";
+    }, 5000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf2410;";
+    }, 6000);
+    setTimeout(function () {
+      a.innerHTML = "&#xf211;";
+    }, 7000);
+}
+chargebattery();
+setInterval(chargebattery, 5000);
+</script>
+
+
+<h1 style="color:#FF0000;">Programando icones==&lt;"&-#-x-f-2-4-4"&gt;<br>Animações &lt;svg&gt;</h1>
+<h2>Animações </h2>
+
+
+### type="rotate"
+
+<svg width="120" height="120" viewBox="0 0 120 120">
+  <polygon points="60,30 90,90 30,90" transform="translate(80)">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 60 70"
+      to="360 60 70"
+      dur="10s"
+      repeatCount="indefinite" />
+  </polygon>
+</svg>
+
+### type="scale"
+
+<svg width="120" height="120" viewBox="0 0 220 320">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      type="scale"
+      from="1"
+      to="3"
+      dur="2s"
+      repeatCount="indefinite" />
+  </polygon>
+</svg>
+
+### type="translate"
+
+<svg width="120" height="120" viewBox="0 0 220 320">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0 0"
+      to="150 250"
+      dur="2s"
+      repeatCount="indefinite" />
+  </polygon>
+</svg>
+
+### type="skewX"
+
+<svg width="120" height="120" viewBox="0 0 220 220">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      type="skewX"
+      from="0 0"
+      to="50"
+      dur="2s"
+      repeatCount="indefinite" />
+  </polygon>
+</svg>
+
+### type="skewY"
+
+<svg width="120" height="120" viewBox="0 0 220 220">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      type="skewY"
+      from="0 0"
+      to="50"
+      dur="2s"
+      repeatCount="indefinite" />
+  </polygon>
+</svg>
+</body>
+</center>
+</html>
+
+
+
