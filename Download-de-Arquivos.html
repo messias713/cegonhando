@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Download de Arquivos</title>
+</head>
+<body>
+ <h1>Download-de-Arquivos</h1>
+ <p>Clique nos links abaixo para fazer o download dos arquivos:</p>
+ <a id="fileDownload" download="nomeDoArquivo.extensao" href="#" onclick="downloadFile()">Clique aqui para fazer o download do arquivo</a>
+ <input type="file" id="fileInput" />
+ <button onclick="uploadFile()">Fazer Upload de Arquivo</button>
+ <script>
+ 
+ function downloadFile() {
+  // Aqui você pode criar lógica para fazer o download do arquivo diretamente para o computador
+  // Por exemplo:
+  // Substitua 'caminho/do/arquivo.ext' pelo caminho do arquivo que deseja baixar
+  //link"==nomeDoArquivo.extensao/exemplo.txt
+  var fileURL = 'https://www.cbr.ru/eng/cash_circulation/memorable_coins/coins_base/?unidbquery.metal_id=0&unidbquery.nominal=-1&unidbquery.page=1&unidbquery.posted=True&unidbquery.serie_id=13&unidbquery.sort=99&unidbquery.sort_direction=down&unidbquery.tab=1&unidbquery.year=0#2';
+  var fileName = 'https://www.cbr.ru/eng/cash_circulation/memorable_coins/coins_base/?unidbquery.metal_id=0&unidbquery.nominal=-1&unidbquery.page=1&unidbquery.posted=True&unidbquery.serie_id=13&unidbquery.sort=99&unidbquery.sort_direction=down&unidbquery.tab=1&unidbquery.year=0#2.txt';
+  var a = document.getElementById('fileDownload');
+  a.href = fileURL;
+  a.download = fileName;
+}
+
+function uploadFile() {
+  // Aqui você pode criar lógica para fazer o upload de arquivos
+  var fileInput = document.getElementById('fileInput');
+  var uploadedFile = fileInput.files[0];
+  // Aqui você pode adicionar a lógica para fazer o upload do arquivo
+  console.log('Arquivo selecionado para upload: ', uploadedFile);
+}
+ </script>
+</body>
+</center>
+</html>
