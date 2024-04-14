@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imagem voadora.</title>
+
+
+<style>
+    #flyingImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 2s ease;
+    }
+</style>
+</head>
+<body>
+    <img src="https://r3.mt.ru/u8/photo6EAD/20128740567-0/original.jpeg" id="flyingImage" alt="Flying Image">
+
+    <script>
+        const flyingImage = document.getElementById('flyingImage');
+
+        window.addEventListener('load', () => {
+            const windowWidth = window.innerWidth - flyingImage.clientWidth;
+            const windowHeight = window.innerHeight - flyingImage.clientHeight;
+
+            setInterval(() => {
+                const randomX = Math.floor(Math.random() * windowWidth);
+                const randomY = Math.floor(Math.random() * windowHeight);
+                
+                flyingImage.style.top = `${randomY}px`;
+                flyingImage.style.left = `${randomX}px`;
+            }, 2000);
+        });
+    </script>
+    <h1 style="color:red;">Imagem voadora.</h1>
+    <pre>
+    PASSAGEM!
+    Viagem no nascer,
+    tudo para crescer.
+    Vida. Seu viver,
+    aqui estou a apresentar,
+    sempre em consideração!
+    Clamando com a alma.
+    Amando com o coração.
+    Estou de passagem,
+    sem tempo. Mas em perdão.
+    
+    </pre>
+</body>
+
+</html>
