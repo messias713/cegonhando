@@ -1,0 +1,90 @@
+<html>
+<center>
+<style>
+body{
+background-color:#FF00FF;
+}
+h1{
+color:	#0000CD;
+}
+</style>
+<head>
+
+<body>
+<h1>Frases emocionais!<br>Maria simples.<br><img src="https://i.gifer.com/embedded/download/BZPG.gif"width="100%"></h1>
+<script language="JavaScript1.2">
+
+var delay=2500 //pausa (en milisegundos)
+var fcontent=new Array()
+begintag='<font face="Verdana" size=3>' //tag que abre los mensajes
+fcontent[0]="Você pode ser feliz! Tenha a coragem de assumir o novo."
+fcontent[1]="Persiste. Nunca desistas de ser, o que pensas ser capaz de alcansar."
+fcontent[2]="Tudo na vida para ser amor, tem primeiro de ser dor."
+fcontent[3]="Complete o seu interior. Na realidade de ser sonhador."
+fcontent[4]="Entre na divindade. Seguindo Deus em verdade!"
+fcontent[5]="Sem caridade, não há evolução! muito menos alma ou coração."
+fcontent[6]="A paz é ser liberdade, no criar. A verdade, eternidade."
+closetag='</font>'
+
+var fwidth=150 //ancho
+var fheight=150 //alto
+
+///No editar/////////////////
+
+var ie4=document.all&&!document.getElementById
+var ns4=document.layers
+var DOM2=document.getElementById
+var faderdelay=0
+var index=0
+
+if (DOM2)
+faderdelay=2000
+
+//function to change content
+function changecontent(){
+if (index>=fcontent.length)
+index=0
+if (DOM2){
+document.getElementById("fscroller").style.color="rgb(245,245,245)"
+document.getElementById("fscroller").innerHTML=begintag+fcontent[index]+closetag
+colorfade()
+}
+else if (ie4)
+document.all.fscroller.innerHTML=begintag+fcontent[index]+closetag
+else if (ns4){
+document.fscrollerns.document.fscrollerns_sub.document.write(begintag+fcontent[index]+closetag)
+document.fscrollerns.document.fscrollerns_sub.document.close()
+}
+
+index++
+setTimeout("changecontent()",delay+faderdelay)
+}
+frame=20;
+hex=245  // Initial color value.
+
+function colorfade() {                 
+// 20 frames fading process
+if(frame>0) {    
+hex-=12; // increase color value
+document.getElementById("fscroller").style.color="rgb("+hex+","+hex+","+hex+")"; // Set color value.
+frame--;
+setTimeout("colorfade()",20);    
+}
+else{
+document.getElementById("fscroller").style.color="rgb(0,0,0)";
+frame=20;
+hex=245
+}   
+}
+
+if (ie4||DOM2)
+document.write('<div id="fscroller" style="border:1px solid black;width:'+fwidth+';height:'+fheight+';padding:2px"></div>')
+
+window.onload=changecontent
+</script>
+
+<ilayer id="fscrollerns" width=&{fwidth}; height=&{fheight};><layer id="fscrollerns_sub" width=&{fwidth}; height=&{fheight}; left=0 top=0></layer></ilayer>
+
+</body>
+</center>
+</html>
