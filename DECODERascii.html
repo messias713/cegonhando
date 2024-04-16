@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decodificador ASCII</title>
+</head>
+<body>
+<h1 style="color:purple;">Descodificador ascii!</h1>
+<div id="output"></div>
+
+<script>
+    function decodeAscii(str) {
+        return str.replace(/&#(\d+);/g, function(match, dec) {
+            return String.fromCharCode(dec);
+        });
+    }
+
+    var encodedStr = '&#83; &#69; &#74; &#65; &#70; &#69; &#76; &#73; &#90; &#80; &#79; &#82; &#70; &#65; &#86; &#79; &#82; &#69; &#85; &#83; &#79; &#85; &#79; &#50; &#51;';
+    var decodedStr = decodeAscii(encodedStr);
+
+    document.getElementById("output").innerText = decodedStr;
+</script>
+
+</body>
+</html>
