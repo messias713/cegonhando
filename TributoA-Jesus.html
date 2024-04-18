@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tributo a Jesus</title>
+<style>
+    #container {
+        width: 100%;
+        height: 900px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 20px;
+    }
+    #image {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+</head>
+<center><h1 style="color:purple;">
+Tributo a Jesus.
+</h1></center>
+<body>
+<div id="container">
+    <p id="verse">Comecei como aprendiz<br>
+Recebendo um suspiro desde do dia que eu nasci<br>
+A vida aqui na terra é difícil<br>
+Primeiro indício foi o choro do início<br>
+Não desista<br>
+Transforme esse vazio no templo do espírito<br>
+Resposta está na Cruz de Cristo<br>
+Mais perfeito dos homens morreu como um maldito<br>
+Apanhou, foi xingado e duvidaram do seu reinado<br>
+Somos nada perto dele e mesmo assim somos agraciados<br>
+Foi um ser humano por inteiro<br>
+Sem defeito<br>
+Feito para ser um espelho<br>
+Nosso egoísmo trata ele como um milagreiro<br>
+Isso sim é motivo de choro o dia inteiro<br>
+Ansiedade, depressão, em busca de solução?<br>
+Segue os 2 bilhões<br>
+Buscam diariamente os passos de 1 líder criado para toda nação<br>
+Será que todos esses são sem noção?<br>
+Ou você que está cheio de orgulho no coração<br>
+Com medo da sua transformação<br>
+De todas as pedras que te jogarão<br>
+Não siga meu exemplo<br>
+Duvidei no princípio<br>
+Fui através da dor<br>
+Como eu queria ter ido pelo amor<br>
+Cansei de rodar em círculos<br>
+O tempo não conspirou a meu favor<br>
+Hoje tenho direito<br>
+Amor concreto<br>
+Fé que faz os céus abertos<br>
+Paz que eu não entendo<br>
+Respostas que vem com o vento.</p>
+    <img id="image" src="https://i.pinimg.com/originals/37/52/78/37527802745650d8cbecc5ce3dccc747.gif" alt="Imagem de Jesus">
+</div>
+
+<script>
+    let verse = document.getElementById('verse');
+    let image = document.getElementById('image');
+    
+    let position = 100;
+
+    function moveImage() {
+        position--;
+        image.style.left = position + '%';
+        if (position <= -100) {
+            position = 100;
+        }
+        requestAnimationFrame(moveImage);
+    }
+
+    moveImage();
+</script>
+</body>
+</html>
