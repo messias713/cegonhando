@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amor e fé! Caindo do Céu.</title>
+<style>
+    body {
+        overflow: hidden;
+    }
+    .imagem {
+        position: absolute;
+        animation: queda 5s linear infinite;
+    }
+    @keyframes queda {
+        0% { top: -100px; }
+        100% { top: 100vh; }
+    }
+</style>
+</head>
+<h1 style="color:#A020F0;">Amor e fé! Caindo do Céu.</h1>
+<pre style="naground-color:#FA8072;">
+Tudo começa num sentir,
+continua no acreditar!
+Perdi a mocidade chorando,
+quero aprender. Com a idade avançada sorrindo.
+Pensando em amor,
+constande, diolido em fé.
+Meu senhor, Deus pai amor,
+completando o aprendizado.
+Deus pai, filho, espírito sando!
+A grandeza do criador,
+Entrelaçada em nossa senhora de Fátima,
+sagrada mãe divina!
+Deus pai cristo nosso senhor!
+Jesus, a mais alta forma de amor!
+</pre>
+<body>
+    <img class="imagem" src="https://avatars.mds.yandex.net/get-pdb/2848443/dec38089-8d1f-45f6-ad3b-57114cb01ca1/orig" style="left: 10%;" />
+    <img class="imagem" src="https://img1.picmix.com/output/pic/normal/3/8/0/4/3494083_6fd69.gif" style="left: 50%;" />
+    <img class="imagem" src="https://i.pinimg.com/originals/50/93/fd/5093fd64447d713be9f54d7ecab279e3.gif" style="left: 90%;" />
+    <script>
+        let imagens = document.querySelectorAll('.imagem');
+        imagens.forEach((imagem, index) => {
+            imagem.style.animationDelay = `${index * 1}s`;
+        });
+    </script>
+</body>
+
+</html>
